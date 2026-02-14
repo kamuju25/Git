@@ -1,2 +1,2 @@
 # Git
-Git Commands
+This file consists of the git commands.
