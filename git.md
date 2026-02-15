@@ -1,4 +1,4 @@
-1. git init
+1. GIT INIT
 
 This command turns a regular folder into a Git repository. Behind the scenes, it creates a hidden .git folder. This folder holds everything Git needs - your commit history, branches, logs, and all the metadata that powers version control.
 
@@ -8,7 +8,7 @@ Once you run git init, Git starts watching your files changes. From here on, you
 
 That's where git config comes in.
 
-2. git config
+2. GIT CONFIG
 
 This command lets you set your name and email so Git can tag each of your commits with your identity.
 
@@ -26,7 +26,7 @@ This step might seem small, but it's actually very important, especially when yo
 
 Now let's say you're not starting a new project locally, but joining an existing one hosted on a remote repository, like Github.
 
-3. git clone
+3. GIT CLONE
 
 In that case, you use the git clone command followed by the repository's URL:
 
@@ -46,7 +46,7 @@ Now let's imagine a different scenario: your local Git repository isn't connecte
 
 That's where the git remote command comes in.
 
-4. git remote
+4. GIT REMOTE
 
 Using git remote, you can add, view or remove remote connections. Remote repository can be hosted anywhere like GitHub, GitLab, Bitbucket, or even your own server.
 
@@ -71,7 +71,7 @@ Here, origin is just an alias for your remote. It's not special, but it's a comm
 
 let's move on to how to actually start working with your code and tracking changes.
 
-5. git status
+GIT STATUS
 
 If there's one Git command you'll find yourself using constantly, it's this one:
 
@@ -91,7 +91,7 @@ It’s always a good habit to run git status before committing anything. It help
 
 Once the changes are reviewed, your next step is usually to stage the right files using git add command.
 
-6. git add
+GIT ADD
 
 When you run git add, you're telling Git to include this in the next snapshot. Just editing a file isn't enough. Git doesn't track your changes automatically. Until you run git add, those changes are invisible to Git when it comes time to commit.
 
@@ -111,7 +111,7 @@ git add .
 
 Once your changes are staged, it's time to lock them in with a commit with a commit with git commit command.
 
-7. git commit
+GIT COMMIT
 
 Think of git commit as hitting "Save" in the world of version control. It takes a snapshot of your codebase at that point in time along with a message describing what changed and why.
 
@@ -142,7 +142,7 @@ This lets you either edit the commit message or include additional changes (as l
 
 git add and git commit are local operations, your changes are saved on your machine only, no one else can see them yet.
 
-8. git push
+GIT PUSH
 
 To share your commits with others, you use:
 
@@ -166,7 +166,7 @@ That's why, before you push your work, it's a good idea to pull the latest chang
 
 To do that, we use git pull command.
 
-9. git pull
+GIT PULL
 
 This command does two things in one step:
 
@@ -184,7 +184,7 @@ Maybe you just want to see what's changed on the remote without affecting your l
 
 That's what git fetch is for.
 
-10. git fetch
+GIT FETCH
 
 ```bash
 git fetch origin
@@ -202,7 +202,7 @@ git fetch gives you full control-you fetch first, review, and only merge when yo
 
 Speaking of branches-let's look at how to create and work with them next.
 
-11. git branch
+GIT BRANCH
 
 When you're working on a new feature or fixing a bug, it's best to keep that work separate from the main codebase. That's where branches comes in.
 
@@ -233,7 +233,7 @@ The branch you're currently on will be marked with an asterisk(*). But if you ha
 
 That's where git checkout command comes in.
 
-12. git checkout
+GIT CHECKOUT
 
 ```bash
 git checkout -b new-feature
@@ -268,7 +268,7 @@ Once you're done working on a branch and want to bring your changes back into th
 git merge
 ```
 
-13. git merge
+GIT MERGE
 
 git merge combines the changes from one branch into another.
 
@@ -310,7 +310,7 @@ Now, while merging is a sage and common way to combine changes, it has a small d
 
 You may end up with lots of merge commits, especially if you're merging frequently.
 
-14. git rebase
+GIT REBASE
 
 If you like keeping your commit history neat and linear, git rebase is the command for you.
 
@@ -333,7 +333,7 @@ This takes all the commits from your current branch and places them on top of th
 
 This results into a cleaner, more linear project history that's easier to read and reason about. When used properly, git rebase is a powerful way to keep your project history clean, clear and easy to follow.
 
-15. git log
+GIT LOG
 
 Oncw you've made a few commits, you'll probably want to look back and see what changed, when and by whom.
 
@@ -366,6 +366,7 @@ git log --graph
 
 Sample output:
 
+```bash
 * commit a1b2c3d (HEAD -> main, origin/main)
 | Author: Jane Doe <jane@example.com>
 | Date:   Tue May 13 10:23:45 2025 -0700
@@ -390,14 +391,14 @@ Sample output:
 * commit f6g7h8i
 |
 |     Update docs
-
+```
 This adds a branch diagram next to your commits, making it easier too see how your project evolved over time. git log is super useful when you're tracking down bugs, or just reviewing your work.
 
 And speaking of reviewing-before you commit, it's always smart to check what's changed since your last commit.
 
 That's where git diff command comes in.
 
-16. git diff
+GIT DIFF
 
 git diff gives you a line-by-line comparison between your working directory and the last commit.
 
@@ -407,6 +408,7 @@ git diff
 
 Sample output:
 
+```bash
 diff --git a/src/App.js b/src/App.js
 index 3a5b2c1..7d8e9f2 100644
 --- a/src/App.js
@@ -420,6 +422,7 @@ index 3a5b2c1..7d8e9f2 100644
      </div>
    );
  }
+```
 
 It highlights what's been added, removed, or modified so you know exactly what you're about to commit.
 
@@ -430,7 +433,7 @@ git diff branch`..branch2
 ```
 This shows what's different between two branches-great for code reviews or deciding whether a branch is ready to merge.
 
-17. git stash
+GIT STASH
 
 Sometimes you're in the middle of working on something and suddenly, you need to switch branches or handle a different task.
 
@@ -453,7 +456,7 @@ Now, let's say you've made a mistake and want to undo a commit or reset your bra
 
 That's where git reset comes into play.
 
-18. git reset
+GIT RESET
 
 git reset is one of the most powerful commands for rolling back changes.
 
@@ -483,7 +486,7 @@ This one completely wipes out changes in both the staging area and working direc
 
 If you've already pushed a commit to a shared repository and need to undo something, git revert is all your safer bet.
 
-19. git revert
+GIT REVERT
 
 If you've already pushed a commit to a shared repository and need to undo something, git revert is the safer option.
 
@@ -500,7 +503,7 @@ What if you only want to copy a specific commit from one branch to another witho
 
 That's where git cherry-pick command comes in.
 
-20. git cherry-pick
+GIT CHERRY-PICK
 
 ```bash
 git cherry-pick <commit-hash>
