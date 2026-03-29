@@ -315,7 +315,7 @@ You may end up with lots of merge commits, especially if you're merging frequent
 
 If you like keeping your commit history neat and linear, git rebase is the command for you.
 
-Unlike git merge, which combines branches and often creates an extra merge commit, git rebase replays your commits on top of another branch as if you wrote them after the latest changes.
+Unlike git merge, which combines branches and often creates an extra merge commit, git rebase replace your commits on top of another branch as if you wrote them after the latest changes.
 
 ```bash
  3f9e1b2 Add login form validation
