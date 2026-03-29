@@ -469,7 +469,7 @@ Soft Reset
 ```bash
 git reset --soft HEAD~1
 ```
-Moves the HEAD back one commit, but keeps all your changes staged. Use this when you want to adjust a previous commit or fiz a message.
+Moves the HEAD back one commit, but keeps all your changes staged. Use this when you want to adjust a previous commit or fix a message.
 
 Mixed Reset
 
